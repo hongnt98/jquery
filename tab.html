@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      $('ul.tabs li').click(function () {
+        var tab_id = $(this).attr('data-tab');
+
+        $('ul.tabs li').removeClass('current');
+        $('.tab-content').removeClass('current');
+
+        $(this).addClass('current');
+        $("#" + tab_id).addClass('current');
+      })
+
+    })
+  </script>
+</head>
+
+<body>
+<style>
+  body {
+    margin-top: 100px;
+    font-family: 'Arial', serif;
+    line-height: 1.6
+  }
+
+  .container {
+    width: 800px;
+    margin: 0 auto;
+  }
+
+  ul.tabs {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+  }
+
+  ul.tabs li {
+    background: none;
+    color: #222;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+
+  ul.tabs li.current {
+    background: #ededed;
+    color: #222;
+  }
+
+  .tab-content {
+    display: none;
+    background: #ededed;
+    padding: 15px;
+  }
+
+  .tab-content.current {
+    display: inherit;
+  }
+</style>
+
+<div class="container">
+
+  <ul class="tabs">
+    <li class="tab-link current" data-tab="tab-1">Strong</li>
+    <li class="tab-link" data-tab="tab-2">Section</li>
+    <li class="tab-link" data-tab="tab-3">Source</li>
+  </ul>
+
+  <div class="tab-content current" id="tab-1">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium mollis elit, ut venenatis augue aliquam et. Aenean interdum augue a fermentum convallis. Nam varius elit mauris. Pellentesque a augue velit. In sed dui a quam ultrices semper. Sed ac imperdiet tortor, vel bibendum sapien. Nullam vulputate, sapien ut rhoncus laoreet, tellus ipsum bibendum eros, sit amet elementum dolor nisl vel metus. Etiam vel maximus eros. Sed in aliquet elit. Donec aliquam lacus in ligula rutrum feugiat. Etiam hendrerit vehicula neque id dapibus. Sed ac mauris eu sapien dignissim dignissim. Vivamus dignissim viverra hendrerit.
+  </div>
+  <div class="tab-content" id="tab-2">
+    Pellentesque eleifend vitae sem sit amet porttitor. Suspendisse at convallis justo. Suspendisse quis nulla nec nulla eleifend aliquet non vel tortor. Vestibulum pretium sapien sit amet volutpat bibendum. Nunc fringilla felis sit amet consectetur ullamcorper. Curabitur interdum pulvinar sapien a finibus. Fusce elementum justo vel odio sollicitudin sodales. Proin at porttitor nisl. Proin ut nibh mattis, ultricies nisl vitae, interdum turpis. Mauris interdum magna in augue tempor, in vulputate velit ultricies. In eu ligula risus. Nunc ultrices tempus commodo. Quisque id viverra massa. Phasellus sed iaculis lorem.
+  </div>
+  <div class="tab-content" id="tab-3">
+    Sed bibendum dui at erat varius, sed fringilla mauris gravida. Donec dolor orci, ornare vel ipsum non, pellentesque bibendum tortor. In ut consectetur augue, pellentesque vulputate nunc. Duis pharetra diam eget ante molestie suscipit. Suspendisse dui diam, accumsan a convallis a, gravida et massa. Vestibulum egestas dui sagittis eros euismod, eget vehicula enim pellentesque. Aliquam aliquet, justo sed placerat dapibus, quam nisl malesuada turpis, sit amet fringilla mauris urna sed diam. Mauris id quam at mauris posuere venenatis et ullamcorper ante. Phasellus ac leo in tortor blandit gravida. Quisque nec varius libero. Nam eu tellus massa. Aenean quis commodo felis, ut vulputate mauris. Mauris rhoncus ullamcorper magna. Sed dolor lorem, consectetur sed finibus at, accumsan a lacus.
+  </div>
+
+</div><!-- container -->
+
+</body>
+</html>

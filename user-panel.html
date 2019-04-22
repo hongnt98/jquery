@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $(".flip").on('click', function (event) {
+        $(".panel").toggle();
+        event.stopPropagation();
+      });
+
+      $('.panel').on('click', function(event){
+        event.stopPropagation();
+      });
+
+      $(document).on('click', function(event){
+        $(".panel").hide();
+      });
+    });
+  </script>
+
+  <style type="text/css">
+    div.panel, p.flip {
+      margin: 0px;
+      padding: 5px;
+      text-align: center;
+      background: #ddd;
+      border: solid 1px #fff;
+    }
+
+    div.panel {
+      widht: 50%;
+      height: 100px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<p class="flip">Click here to Show/Hidden Panel. Click out to Hidden Panel</p>
+<div class="panel">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium mollis elit, ut venenatis augue aliquam
+  et. Aenean interdum augue a fermentum convallis. Nam varius elit mauris. Pellentesque a augue velit. In sed dui a quam
+  ultrices semper. Sed ac imperdiet tortor, vel bibendum sapien. Nullam vulputate, sapien ut rhoncus laoreet, tellus
+  ipsum bibendum eros, sit amet elementum dolor nisl vel metus. Etiam vel maximus eros. Sed in aliquet elit. Donec
+  aliquam lacus in ligula rutrum feugiat. Etiam hendrerit vehicula neque id dapibus. Sed ac mauris eu sapien dignissim
+  dignissim. Vivamus dignissim viverra hendrerit.
+</div>
+
+</body>
+</html>
